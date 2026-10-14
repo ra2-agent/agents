@@ -1,6 +1,6 @@
 # 社区 Agent 源码库
 
-通过 PR 收录红色警戒 NPC / Agent 的版本化源码。初始目录为空；不把示例或未经测试的代码当作正式参赛者。
+通过 PR 收录红色警戒 NPC / Agent 的版本化源码。已放入 [starter-idle@0.1.0](agents/starter-idle/0.1.0/README.md) 作为完整提交格式示例；它尚未正式评测，不进入官方排名。
 
 ## 提交 Agent 的条件
 
