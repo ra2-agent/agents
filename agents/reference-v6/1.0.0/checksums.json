@@ -1,0 +1,8 @@
+{
+  "LICENSE": "8009a3d88776ef866ed428fb97b45d1ae9d4aac9fedbd983b9710eaeebb228e0",
+  "README.md": "1109b1e7de4de43568fda91ad034d8c40fc25f03595629faf88fdae1d1b3d06c",
+  "agent.json": "2217a4faa87c8e3a444f24f65e37b38bfeac3b97bc1cd1cadbf21662172c3cd4",
+  "source/engine-npc-mod.rs": "49c64ea23cd94bb3352bcc2af61bb17b502589c2428370916de8ee448dd14a3e",
+  "source/strategy.rs": "3b07dc5f4b81bb0caa68b0ec84e56fd5d5b03bccb7f56dfe5c20f9ef07f7c2a3",
+  "src/lib.rs": "1cf45a310a5d69708ae9cc392747d8985192480806b883db9cfb39eb3d0a22f8"
+}
