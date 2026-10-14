@@ -1,6 +1,6 @@
 # 社区 Agent 源码库
 
-通过 PR 收录红色警戒 NPC / Agent 的版本化源码。已放入 [starter-idle@0.1.0](agents/starter-idle/0.1.0/README.md) 作为完整提交格式示例；它尚未正式评测，不进入官方排名。
+通过 PR 收录红色警戒 NPC / Agent 的版本化源码。已收录 starter-idle 及来自固定研究引擎提交的九个冻结策略版本。收录不自动产生 Elo，是否参赛及成绩以 [正式榜单](https://github.com/ra2-agent/leaderboard) 的赛季名单和比赛记录为准。
 
 ## 提交 Agent 的条件
 
@@ -27,3 +27,20 @@ agents/<id>/<major.minor.patch>/
 使用 [开发模板](https://github.com/ra2-agent/agent-template) 的 package-agent 脚本创建版本。Node.js 22+ 下执行 node scripts/check.mjs . 检查格式、哈希、文件上限和路径。静态检查不会编译或执行源码。CI 还会对比主分支，拒绝覆盖已合并版本；该版本的所有说明文件也不可改，补充说明请开新版本或 Issue。
 
 [正式榜单](https://github.com/ra2-agent/leaderboard/blob/main/generated/leaderboard.md) 中的 roster 决定哪些版本已参赛；合并收录并不自动增加分数或触发测试。
+
+## 首批研究策略
+
+| Agent 版本 | 策略 |
+|---|---|
+| [starter-idle@0.1.0](agents/starter-idle/0.1.0/README.md) | 不主动发出命令的对照 |
+| [hard-baseline-v1@1.0.0](agents/hard-baseline-v1/1.0.0/README.md) | 原始 Hard 启发式：展开、建造、生产和进攻。 |
+| [reference-v1@1.0.0](agents/reference-v1/1.0.0/README.md) | 在原始策略基础上进行局部集火。 |
+| [reference-v2@1.0.0](agents/reference-v2/1.0.0/README.md) | 增加同类车辆的协同接敌。 |
+| [reference-v3@1.0.0](agents/reference-v3/1.0.0/README.md) | 增加资金分配、持续生产和队列上限。 |
+| [reference-v4@1.0.0](agents/reference-v4/1.0.0/README.md) | 增加按矿区位置选择矿场落点。 |
+| [reference-v5@1.0.0](agents/reference-v5/1.0.0/README.md) | 增加射程拉扯与威胁效率；冻结 variant 16。 |
+| [reference-v6@1.0.0](agents/reference-v6/1.0.0/README.md) | 按经济条件前置生产建筑；冻结 variant 23。 |
+| [reference-v7@1.0.0](agents/reference-v7/1.0.0/README.md) | 混编部队残血撤退；冻结 variant 24，与本轮 candidate 行为相同。 |
+| [counter-retreat-v1@1.0.0](agents/counter-retreat-v1/1.0.0/README.md) | 基于 reference-v5 无条件残血撤退；冻结 variant 21。 |
+
+候选版与 reference-v7 当前行为相同，首批只登记冻结的 reference-v7；tune-* 参数变体仍留在引擎实验池。新增策略或改动现有版本时提交新的版本目录。
